@@ -1,0 +1,14 @@
+<html 
+	t:type="layout/layout"
+	t:title="About Program"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	xmlns:p="tapestry:parameter"
+>
+
+    <div>
+    	<br />
+    	<div class="label">${message:application-name} ${message:version-label}: </div><div>1.0.0-ALPHA</div>
+    	<div class="label">Build date: </div><div>2010-05-31 02:11:27</div>
+    </div>
+
+</html>

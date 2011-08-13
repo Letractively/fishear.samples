@@ -1,0 +1,33 @@
+<html 
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	t:title="${message:external-persons}"
+	xmlns:p="tapestry:parameter"
+>
+<body>
+<div class="masterDetail">
+	<t:fe.messages />
+	<div class="masterDetailSearch">
+		<t:component t:id="dataSearch" />
+	</div>
+	<div class="masterDetailGrid">
+	<t:fe.gtable
+		inplace="true"
+		source="datasource"
+		rowsPerPage="10"
+		row="current"
+		include="personCode,firstname,lastname,titles"
+		add="edit,delete"
+		pagerPosition="bottom"
+	>
+		<p:createDateCell><t:output value="current.createDate" t:format="dateTimeFormat"/></p:createDateCell>
+		<p:idCell>${current.id}</p:idCell>
+		<p:editCell><t:actionlink t:id="edit" t:context="current.id" >${message:edit-link-label}</t:actionlink></p:editCell>
+		<p:deleteCell><t:actionlink t:id="delete" t:context="current.id" t:mixins="fe/confirm" t:confirmMessage="message:really-delete-query" >${message:delete-link-label}</t:actionlink></p:deleteCell>
+	</t:fe.gtable>	
+	</div>
+	<div class="masterDetailForm">
+		<t:component t:id="detailForm" />
+	</div>
+</div>
+</body>
+</html>

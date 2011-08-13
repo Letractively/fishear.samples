@@ -1,0 +1,23 @@
+<html 
+	t:type="layout/layout" 
+	t:title="${message:application-name} Index"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	xmlns:p="tapestry:parameter"
+>
+<!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+    <p>${message:greeting}</p>
+	<p>
+		${message:you-can-go-to-text} <t:pagelink page="extpersons">${message:person-admin-page-label}</t:pagelink>
+		or to <t:pagelink page="admin">${message:admin-page-label}</t:pagelink>
+		<br />
+
+		The <t:pagelink page="admin">${message:admin-page-label}</t:pagelink> contains bit more complex form. It consists of two entities, and using zone for select record to edit.
+		The mixin to confirm deleting is used too.
+	</p>
+	<p>
+		Some pages require to be <b>logged in as an user</b>.<br />
+		In such case, type <b>any combination of username and password you wont</b> (there is only sample login service, that accepts everything <span style="font-size: 180%">&#x263a;</span> ).
+	</p>
+
+</html>

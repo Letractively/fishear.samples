@@ -1,0 +1,49 @@
+<html 
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	xmlns:p="tapestry:parameter"
+	t:type="layout/Layout"
+	t:pageTitle="Sample login page"
+	t:title="The sample login page"
+>
+<div>
+<br />
+<div>
+<b>You can try</b>
+<ul class="mainpage">
+<li><t:pagelink t:page="feac/loginPage">simple login page from within the "fishear-t5-rights" module</t:pagelink></li>
+<li>or <t:pagelink t:page="loginPage">sililar page from within this sample app</t:pagelink> - this is formatted by proper layout </li>
+<li>or <a href="#" onclick="showLogin()">show login dialog using javascript</a><div style="font-size: 11px; ">
+Javascript login "pseudo-window" requires "jquery" and "jquery-ui" library (see the "layou" class)
+</div> </li>
+</ul>
+
+</div>
+<div style="color:#101010">
+Try to login as "admin", then as "user" and then as any account which <b>does not</b> contain 'user' in its name.
+</div>
+
+<div>
+
+<t:feac.requireLogin t:roleCode="admin,user">
+<br />
+<h3 style="color:blue; ">
+	If you see this part, you are logged in with role 'admin' or 'user'.
+</h3>
+</t:feac.requireLogin>
+
+<t:feac.requireLogin t:roleCode="admin" noAccess="block:noAdminBlock" nologin="literal:&#160;">
+<br />
+<h3 style="color:#008000; ">
+	Only user with role 'admin' has access to this part.
+</h3>
+</t:feac.requireLogin>
+</div>
+</div>
+<t:block t:id="noAdminBlock">
+<h2 style="color:red; font-size: 15px; font-weight: bold;">
+This part is accessible only for 'admin', but you are not it.
+</h2>
+</t:block>
+
+
+</html>

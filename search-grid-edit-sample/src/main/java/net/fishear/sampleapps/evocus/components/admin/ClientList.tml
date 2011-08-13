@@ -1,0 +1,38 @@
+<div
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd" 
+	xmlns:p="tapestry:parameter" 
+	class="className"
+>
+	<div class="masterDetail" t:type="zone" t:id="fullPageZone">
+
+		<t:fe.messages />  <!-- it is enaugh to add this component to page. It is found and used by subcomponents. -->
+
+		<div class="masterDetailGrid">
+		<t:fe.gtable 
+			reorder="code,fname,lname,remark"
+			t:source="DataSource" 
+			t:row="row"
+			t:include="remark"
+			rowsPerPage="10"
+			pagerPosition="bottom"
+			add="code,fname,lname,titles,edit,delete"
+		>
+			<p:editCell>
+				<t:actionlink t:id="zedit" t:context="row.id" zone="detailEditZone" >${message:edit-label}</t:actionlink>
+			</p:editCell>
+			<p:deleteCell><t:actionlink t:id="delete" t:context="row.id" t:mixins="fe/confirm" t:confirmMessage="message:really-delete-query" >${message:delete-link-label}</t:actionlink></p:deleteCell>
+			<p:fnameCell>${row.person.firstName}</p:fnameCell>
+			<p:lnameCell>${row.person.lastName}</p:lnameCell>
+			<p:titlesCell>${row.person.titles}</p:titlesCell>
+			<p:codeCell>${row.person.personCode}</p:codeCell>
+		</t:fe.gtable>
+		</div>
+
+		<div id="detailEditDiv">
+		<t:zone t:id="detailEditZone">
+			<t:component t:id="detailForm" />
+		</t:zone>
+		</div>
+		
+	</div>
+</div>

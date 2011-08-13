@@ -1,0 +1,61 @@
+.fgm-button {
+	clear: left;
+	margin: 0 4px 40px 20px;
+	padding: .4em 1em;
+	text-decoration: none !important;
+	cursor: pointer;
+	position: relative;
+	text-align: center;
+	zoom: 1;
+}
+
+.fgm-button .ui-icon {
+	position: absolute;
+	top: 50%;
+	margin-top: -8px;
+	left: 50%;
+	margin-left: -8px;
+}
+
+a.fgm-button {
+	float: left;
+}
+
+/* removes extra button width in IE */
+button.fgm-button {
+	width: auto;
+	overflow: visible;
+}
+
+.fgm-button-icon-left {
+	padding-left: 2.1em;
+}
+
+.fgm-button-icon-right {
+	padding-right: 2.1em;
+}
+
+.fgm-button-icon-left .ui-icon {
+	right: auto;
+	left: .2em;
+	margin-left: 0;
+}
+
+.fgm-button-icon-right .ui-icon {
+	left: auto;
+	right: .2em;
+	margin-left: 0;
+}
+
+/* solo icon buttons must have block properties for the text-indent to work */
+.fgm-button-icon-solo {
+	display: block;
+	width: 8px;
+	text-indent: -9999px;
+}
+
+.fgm-button.ui-state-loading .ui-icon {
+	background:
+		url(jquery-ui-1.8rc3/themes/base/images/ui-anim_basic_16x16.gif)
+		no-repeat 0 0;
+}

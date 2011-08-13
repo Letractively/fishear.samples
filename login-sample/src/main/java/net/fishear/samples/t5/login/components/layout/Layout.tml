@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Title      : Concrete
+Version    : 1.0
+Released   : 20080825
+Description: A Web 2.0 design with fluid width suitable for blogs and small websites.
+-->
+<html 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	xmlns:p="tapestry:parameter"
+>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>${appTitle}</title>
+    </head>
+    <body>
+
+        <!-- this component is for javascript login dialog. It is hidden by default, and shown using javascript in case login us required. -->
+	    <div id="loginFormDialog" title="Login form" style="display:none">
+	    	<t:component t:id="loginForm" />
+	   	</div>
+
+        <!-- start header, including user info and login / logout link -->
+        <div id="header">
+            <div id="logo">
+                <h1>
+                    <t:pagelink page="index">${appTitle}</t:pagelink>
+                </h1>
+            </div>
+        	<table id="menubar" >
+        		<tr><td>
+		            <div id="menu">
+		                <ul>
+		                    <li t:type="loop" t:source="MenuItems" t:value="MenuItem" t:class="prop:classForPageName">
+		                        <a href="${pageUrl}">${PageTitle}</a>
+		                    </li>
+		                </ul>
+		            </div>
+        		</td></tr>
+        		<tr><td>
+					<!-- component "accountInfo" (from within java class) shows info about user currently logged in, or the "login" reference -->
+		           	<t:component t:id="accountInfo" onclickAction="literal:showLogin()"/>
+        		</td></tr>
+        	</table>
+        </div>
+        <!-- end header -->
+
+        <!-- start page -->
+        <div id="page">
+            <!-- start content -->
+            <div id="content">
+                <div class="post">
+                    <div class="title">
+                        <h2>${title}</h2>
+                    </div>
+                    <div class="entry">
+                    	<t:body/> <!-- the main page's content -->
+                    </div>
+                </div>
+            </div>
+            <!-- end content -->
+            <br style="clear: both;"/>
+        </div>
+        <!-- end page -->
+
+        <!-- start footer -->
+        <div id="footer">
+            <p class="legal">
+                &copy;2011 RT. All Rights Reserved.
+            </p>
+        </div>
+        <!-- end footer -->
+    </body>
+</html>
