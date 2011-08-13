@@ -1,13 +1,13 @@
-package net.fishear.sampleapps.evocus.components.persons;
+package net.fishear.samples.t5.srchgridform.components.persons;
 
 
 import java.util.Map;
 
 import net.fishear.data.generic.services.GenericService;
-import net.fishear.sampleapps.evocus.entities.Person;
-import net.fishear.sampleapps.evocus.services.ClientService;
-import net.fishear.sampleapps.evocus.services.PersonService;
-import net.fishear.web.t5.components.AbstractFormComponent;
+import net.fishear.samples.t5.srchgridform.entities.Person;
+import net.fishear.samples.t5.srchgridform.services.ClientService;
+import net.fishear.samples.t5.srchgridform.services.PersonService;
+import net.fishear.web.t5.components.AbstractForm;
 
 import org.apache.tapestry5.annotations.Import;
 import org.apache.tapestry5.ioc.annotations.Inject;
@@ -17,7 +17,7 @@ import org.apache.tapestry5.ioc.annotations.Inject;
 public class 
 	DetailForm
 extends
-	AbstractFormComponent<Person>
+	AbstractForm<Person>
 {
 
 	@Inject

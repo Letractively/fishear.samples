@@ -1,10 +1,10 @@
-package net.fishear.sampleapps.evocus.services;
+package net.fishear.samples.t5.srchgridform.services;
 
 
 import net.fishear.data.generic.query.QueryFactory;
 import net.fishear.data.generic.services.AbstractService;
 import net.fishear.exceptions.ValidationException;
-import net.fishear.sampleapps.evocus.entities.Person;
+import net.fishear.samples.t5.srchgridform.entities.Person;
 import net.fishear.utils.Texts;
 
 

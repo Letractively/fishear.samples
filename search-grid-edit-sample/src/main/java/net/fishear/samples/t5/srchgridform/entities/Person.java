@@ -1,4 +1,4 @@
-package net.fishear.sampleapps.evocus.entities;
+package net.fishear.samples.t5.srchgridform.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

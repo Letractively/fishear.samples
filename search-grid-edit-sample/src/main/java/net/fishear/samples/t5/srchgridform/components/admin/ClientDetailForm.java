@@ -1,31 +1,31 @@
-package net.fishear.sampleapps.evocus.components.admin;
+package net.fishear.samples.t5.srchgridform.components.admin;
 
 import org.apache.tapestry5.annotations.Import;
 import org.apache.tapestry5.ioc.annotations.Inject;
 
-import net.fishear.sampleapps.evocus.entities.Client;
-import net.fishear.sampleapps.evocus.entities.Person;
-import net.fishear.sampleapps.evocus.services.ClientService;
-import net.fishear.sampleapps.evocus.services.PersonService;
-import net.fishear.web.t5.components.AbstractFormComponent;
+import net.fishear.samples.t5.srchgridform.entities.Client;
+import net.fishear.samples.t5.srchgridform.entities.Person;
+import net.fishear.samples.t5.srchgridform.services.ClientService;
+import net.fishear.samples.t5.srchgridform.services.PersonService;
+import net.fishear.web.t5.components.AbstractForm;
 
 
 @Import(stylesheet = "ClientDetailForm.css")
 public class 
 	ClientDetailForm
 extends
-	AbstractFormComponent<Client>
+	AbstractForm<Client>
 {
 
 	@Inject
-	private ClientService ptSvc;
+	private ClientService clientService;
 	
 	@Inject
 	private PersonService persSvc;
 	
 	@Override
 	public ClientService getService() {
-		return ptSvc;
+		return clientService;
 	}
 
 	protected void prepareNewEntity(Client entity) {

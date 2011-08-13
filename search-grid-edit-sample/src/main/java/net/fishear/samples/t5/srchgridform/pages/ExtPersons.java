@@ -1,7 +1,7 @@
-package net.fishear.sampleapps.evocus.pages;
+package net.fishear.samples.t5.srchgridform.pages;
 
 
-import net.fishear.sampleapps.evocus.components.persons.PersonsList;
+import net.fishear.samples.t5.srchgridform.components.persons.PersonsList;
 import net.fishear.web.services.EnvironmentService;
 
 import org.apache.tapestry5.annotations.Component;

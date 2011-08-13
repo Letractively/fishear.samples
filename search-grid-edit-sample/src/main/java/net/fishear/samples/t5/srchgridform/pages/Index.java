@@ -1,4 +1,4 @@
-package net.fishear.sampleapps.evocus.pages;
+package net.fishear.samples.t5.srchgridform.pages;
 
 import java.util.Date;
 

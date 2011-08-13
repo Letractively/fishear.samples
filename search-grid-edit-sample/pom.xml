@@ -184,7 +184,7 @@
 				<artifactId>tapestry-component-report</artifactId>
 				<version>${tapestry-release-version}</version>
 				<configuration>
-					<rootPackage>net.fishear.sampleapps.evocus</rootPackage>
+					<rootPackage>net.fishear.samples.t5.srchgridform</rootPackage>
 				</configuration>
 			</plugin>
 		</plugins>

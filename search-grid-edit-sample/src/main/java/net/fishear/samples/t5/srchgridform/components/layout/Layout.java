@@ -1,9 +1,9 @@
-package net.fishear.sampleapps.evocus.components.layout;
+package net.fishear.samples.t5.srchgridform.components.layout;
 
-import net.fishear.sampleapps.evocus.pages.Admin;
-import net.fishear.sampleapps.evocus.pages.ExtPersons;
-import net.fishear.sampleapps.evocus.pages.Index;
-import net.fishear.sampleapps.evocus.pages.about.About;
+import net.fishear.samples.t5.srchgridform.pages.Admin;
+import net.fishear.samples.t5.srchgridform.pages.ExtPersons;
+import net.fishear.samples.t5.srchgridform.pages.Index;
+import net.fishear.samples.t5.srchgridform.pages.about.About;
 import net.fishear.utils.Texts;
 import net.fishear.web.rights.t5.components.AccountInfo;
 import net.fishear.web.rights.t5.components.LoginForm;

@@ -9,7 +9,7 @@ import static org.testng.Assert.assertNull;
 
 import java.util.List;
 
-import net.fishear.sampleapps.evocus.services.AppModule;
+import net.fishear.samples.t5.srchgridform.services.AppModule;
 import net.fishear.testsupport.t5.AbstractT5Test;
 import net.fishear.web.rights.services.LoginLogoutService;
 

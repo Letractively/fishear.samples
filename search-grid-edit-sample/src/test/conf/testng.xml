@@ -2,7 +2,7 @@
 <suite name="TapestryQS Application Test Suite" annotations="1.5">
     <test name="Unit Tests">
         <packages>
-            <package name="net.fishear.sampleapps.evocus"/>
+            <package name="net.fishear.samples.t5.srchgridform"/>
         </packages>
     </test>
 </suite>

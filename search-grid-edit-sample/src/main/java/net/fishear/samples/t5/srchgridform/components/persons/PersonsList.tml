@@ -23,7 +23,7 @@
 		<p:idCell>${current.id}</p:idCell>
 		<p:editCell><t:actionlink t:id="edit" t:context="current.id" >${message:edit-link-label}</t:actionlink></p:editCell>
 		<p:deleteCell><t:actionlink t:id="delete" t:context="current.id" t:mixins="fe/confirm" t:confirmMessage="message:really-delete-query" >${message:delete-link-label}</t:actionlink></p:deleteCell>
-	</t:fe.gtable>	
+	</t:fe.gtable>
 	</div>
 	<div class="masterDetailForm">
 		<t:component t:id="detailForm" />

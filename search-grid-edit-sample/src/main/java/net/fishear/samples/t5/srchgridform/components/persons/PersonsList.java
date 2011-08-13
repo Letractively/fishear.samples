@@ -1,9 +1,9 @@
-package net.fishear.sampleapps.evocus.components.persons;
+package net.fishear.samples.t5.srchgridform.components.persons;
 
 import net.fishear.data.generic.services.GenericService;
-import net.fishear.sampleapps.evocus.entities.Person;
-import net.fishear.sampleapps.evocus.services.PersonService;
-import net.fishear.web.t5.components.AbstractGridComponent;
+import net.fishear.samples.t5.srchgridform.entities.Person;
+import net.fishear.samples.t5.srchgridform.services.PersonService;
+import net.fishear.web.t5.components.AbstractGrid;
 import net.fishear.web.t5.components.Messages;
 
 import org.apache.tapestry5.annotations.Component;
@@ -19,7 +19,7 @@ import org.apache.tapestry5.ioc.annotations.Inject;
 public class 
 	PersonsList
 extends
-	AbstractGridComponent<Person>
+	AbstractGrid<Person>
 {
 	@Component
 	private DataSearch dataSearch;
@@ -35,11 +35,6 @@ extends
 
 	@InjectComponent
 	private Messages messages;
-
-	@CommitAfter
-	public void onActionFromEdit(Long id) {
-		detailForm.load(id);
-	}
 
 	@Override
 	public GenericService<Person> getService() {

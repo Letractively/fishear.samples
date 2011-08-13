@@ -18,7 +18,7 @@
 			add="code,fname,lname,titles,edit,delete"
 		>
 			<p:editCell>
-				<t:actionlink t:id="zedit" t:context="row.id" zone="detailEditZone" >${message:edit-label}</t:actionlink>
+				<t:actionlink t:id="edit" t:context="row.id" zone="detailEditZone" >${message:edit-label}</t:actionlink>
 			</p:editCell>
 			<p:deleteCell><t:actionlink t:id="delete" t:context="row.id" t:mixins="fe/confirm" t:confirmMessage="message:really-delete-query" >${message:delete-link-label}</t:actionlink></p:deleteCell>
 			<p:fnameCell>${row.person.firstName}</p:fnameCell>

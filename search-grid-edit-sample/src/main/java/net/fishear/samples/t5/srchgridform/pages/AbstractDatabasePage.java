@@ -1,6 +1,6 @@
-package net.fishear.sampleapps.evocus.pages;
+package net.fishear.samples.t5.srchgridform.pages;
 
-import net.fishear.sampleapps.evocus.services.PersonService;
+import net.fishear.samples.t5.srchgridform.services.PersonService;
 import net.fishear.web.t5.base.AbstractComponent;
 import net.fishear.web.t5.components.Messages;
 
