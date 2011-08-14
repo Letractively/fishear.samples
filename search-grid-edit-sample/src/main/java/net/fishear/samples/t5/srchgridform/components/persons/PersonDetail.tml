@@ -1,0 +1,26 @@
+<div
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd" 
+	xmlns:p="tapestry:parameter" 
+>
+    <t:form t:id="addRow">
+	<t:hidden value="entity.idstring" />
+	<table>
+    	<tr>
+    	<t:fe.item class="left" colspan="99" label="person-id-label"><t:textfield t:id="oscis" value="entity.personCode" disabled="!entity.new" /></t:fe.item>
+    	</tr>
+    	<tr>
+    	<t:fe.item label="first-name-label"><t:textfield t:id="addname" value="entity.firstname"/></t:fe.item>
+    	<t:fe.item label="last-name-label"><t:textfield t:id="addtext" value="entity.lastName"/></t:fe.item>
+    	<t:fe.item label="titles-label"><t:textfield t:id="titles" value="entity.titles"/></t:fe.item>
+    	</tr>
+		<tr>
+		<t:fe.item>
+			<br />
+    		<t:submit t:value="message:save-label" />
+    		&#160;
+    		<t:actionlink t:id="add" zone="detailZone">${message:new-rec-label}</t:actionlink>
+    	</t:fe.item>
+    	</tr>
+	</table>
+    </t:form>
+</div>

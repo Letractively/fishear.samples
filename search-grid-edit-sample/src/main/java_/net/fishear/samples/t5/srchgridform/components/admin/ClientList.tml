@@ -3,11 +3,11 @@
 	xmlns:p="tapestry:parameter" 
 	class="className"
 >
-	<div class="masterDetail" t:id="fullPageZone">
+	<div class="masterDetail" t:type="zone" t:id="fullPageZone">
 
 		<t:fe.messages />  <!-- it is enaugh to add this component to page. It is found and used by subcomponents. -->
 
-		<div class="masterDetailGrid" style="height: 250px; overflow: auto;">
+		<div class="masterDetailGrid">
 		<t:fe.gtable 
 			reorder="code,fname,lname,remark"
 			t:source="DataSource" 
@@ -16,8 +16,11 @@
 			rowsPerPage="10"
 			pagerPosition="bottom"
 			add="code,fname,lname,titles,edit,delete"
-			editZone="detailEditZone"
 		>
+			<p:editCell>
+				<t:actionlink t:id="edit" t:context="row.id" zone="detailEditZone" >${message:edit-label}</t:actionlink>
+			</p:editCell>
+			<p:deleteCell><t:actionlink t:id="delete" t:context="row.id" t:mixins="fe/confirm" t:confirmMessage="message:really-delete-query" >${message:delete-link-label}</t:actionlink></p:deleteCell>
 			<p:fnameCell>${row.person.firstName}</p:fnameCell>
 			<p:lnameCell>${row.person.lastName}</p:lnameCell>
 			<p:titlesCell>${row.person.titles}</p:titlesCell>

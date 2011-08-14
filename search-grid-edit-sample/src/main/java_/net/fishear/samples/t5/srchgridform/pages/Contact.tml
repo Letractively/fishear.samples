@@ -1,0 +1,9 @@
+<html
+	t:type="layout/layout"
+	t:title="My Contact"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	xmlns:p="tapestry:parameter">
+
+    <p>Contact Feac Team ...</p>
+
+</html>

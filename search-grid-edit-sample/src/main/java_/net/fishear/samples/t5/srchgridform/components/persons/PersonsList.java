@@ -9,6 +9,8 @@ import net.fishear.web.t5.components.Messages;
 import org.apache.tapestry5.annotations.Component;
 import org.apache.tapestry5.annotations.Import;
 import org.apache.tapestry5.annotations.InjectComponent;
+import org.apache.tapestry5.annotations.Property;
+import org.apache.tapestry5.hibernate.annotations.CommitAfter;
 import org.apache.tapestry5.ioc.annotations.Inject;
 
 
@@ -19,18 +21,18 @@ public class
 extends
 	AbstractGrid<Person>
 {
-	@SuppressWarnings("unused")
 	@Component
-	private PersonSearch personSearch;
+	private DataSearch dataSearch;
 
 	@Inject
 	private PersonService epSvc;
-
-	@SuppressWarnings("unused")
+	
 	@Component
-	private PersonDetail personDetail;
+	private DetailForm detailForm;
 
-	@SuppressWarnings("unused")
+	@Property 
+	private Person current;
+
 	@InjectComponent
 	private Messages messages;
 

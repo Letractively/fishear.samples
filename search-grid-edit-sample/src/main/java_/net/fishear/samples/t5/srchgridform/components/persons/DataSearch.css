@@ -1,0 +1,7 @@
+
+div.inline { float: left; padding: 1px 4px 5px 0px; }
+div.inline label { display: block; }
+#personCode { width: 8em; }
+#orgUnitCode {width: 8em; }
+.searchForm { height: 3.2em; }
+#loginAd {width: 60px; }

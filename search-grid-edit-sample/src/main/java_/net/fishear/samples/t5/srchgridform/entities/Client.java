@@ -5,7 +5,6 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 import net.fishear.data.generic.entities.AbstractStdandardEntity;
 
@@ -35,10 +34,5 @@ public class Client extends AbstractStdandardEntity
 	public Person getPerson() {
 		return person;
 	}
-	
-	@Transient
-	public String recordDescription () {
-		return "Client '" + (get("person.firstName", "") + " " + get("person.lastName", "")).trim() + "'";
-	} 
 	
 }

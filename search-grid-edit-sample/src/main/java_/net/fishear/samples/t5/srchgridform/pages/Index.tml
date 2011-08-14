@@ -9,10 +9,10 @@
     <p>${message:greeting}</p>
 	<p>
 		${message:you-can-go-to-text} <t:pagelink page="extpersons">${message:person-admin-page-label}</t:pagelink>
-		or to <t:pagelink page="clients">${message:clients-page-label}</t:pagelink>
+		or to <t:pagelink page="admin">${message:admin-page-label}</t:pagelink>
 		<br />
 
-		The <t:pagelink page="clients">${message:clients-page-label}</t:pagelink> contains bit more complex form. It consists of two entities, and using zone for select record to edit.
+		The <t:pagelink page="admin">${message:admin-page-label}</t:pagelink> contains bit more complex form. It consists of two entities, and using zone for select record to edit.
 		The mixin to confirm deleting is used too.
 	</p>
 	<p>

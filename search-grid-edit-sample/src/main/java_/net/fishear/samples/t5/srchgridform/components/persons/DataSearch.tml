@@ -1,0 +1,20 @@
+<div
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd" 
+	xmlns:p="tapestry:parameter" 
+	class="searchForm"
+>
+    <t:form t:id="search">
+    	<div id="personCodeBlock" class="inline">
+    		<t:label t:for="personCode" >${message:person-code-label}</t:label>
+    		<t:textfield t:id="personCode" t:value="entity.personCode"/>
+    	</div>
+    	<div id="srchtextBlock" class="inline">
+    		<t:label t:for="srchtext" >${message:person-label}</t:label>
+    		<t:textfield t:id="srchtext" t:value="entity.lastName"/>
+    	</div>
+    	<div id="buttonsBlock" class="inline">
+       		<t:submit t:id="srch" t:value="message:do-search-label" />
+   			<t:actionlink t:id="srchclr" t:value="message:clear-search-label" >${message:clear-search-label}</t:actionlink>
+   		</div>
+    </t:form>
+</div>

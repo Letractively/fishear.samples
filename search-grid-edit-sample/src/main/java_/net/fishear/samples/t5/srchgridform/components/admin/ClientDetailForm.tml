@@ -6,19 +6,19 @@
     	<t:hidden value="entity.idstring" />
     	<table>
     	<tr>
-   			<t:fe.item label="person-code-label" ><t:textfield value="entity.person.personcode" /></t:fe.item>
+   			<t:fe.item label="person-code-label" inTable="true"><t:textfield value="entity.person.personcode" /></t:fe.item>
    		</tr>
     	<tr>
-   			<t:fe.item label="first-last-name-label" ><t:textfield value="entity.person.firstName" /></t:fe.item>
+   			<t:fe.item label="first-last-name-label" inTable="true"><t:textfield value="entity.person.firstName" /></t:fe.item>
 			<td><t:textfield value="entity.person.lastName" /></td>
    		</tr>
     	<tr><td colspan="99"><hr /></td></tr>
     	<tr>
-   			<t:fe.item label="customer-remark-label" colspan="2"><t:textfield value="entity.remark" /></t:fe.item>
+   			<t:fe.item label="customer-remark-label" inTable="true" colspan="2"><t:textfield value="entity.remark" /></t:fe.item>
    		</tr>
     	<tr><td colspan="99"><hr /></td></tr>
     	<tr>
-   			<t:fe.item label="literal:&#160;" colspan="3">
+   			<t:fe.item label="literal:&#160;" inTable="true" colspan="3">
    				<t:submit t:value="message:save-label" />
    				<t:actionlink t:id="add" z-one="detailEditZone">${message:new-rec-label}</t:actionlink>
    			</t:fe.item>

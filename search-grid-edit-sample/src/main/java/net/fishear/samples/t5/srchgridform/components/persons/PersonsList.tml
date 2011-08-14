@@ -7,26 +7,29 @@
 <div class="masterDetail">
 	<t:fe.messages />
 	<div class="masterDetailSearch">
-		<t:component t:id="dataSearch" />
+		<t:component t:id="personSearch" />
 	</div>
 	<div class="masterDetailGrid">
+	<t:zone t:id="gridZone">
 	<t:fe.gtable
 		inplace="true"
 		source="datasource"
 		rowsPerPage="10"
-		row="current"
-		include="personCode,firstname,lastname,titles"
+		row="row"
+		include="personCode,firstname,lastname,titles,createDate"
 		add="edit,delete"
 		pagerPosition="bottom"
+		editZone="detailZone"
 	>
-		<p:createDateCell><t:output value="current.createDate" t:format="dateTimeFormat"/></p:createDateCell>
-		<p:idCell>${current.id}</p:idCell>
-		<p:editCell><t:actionlink t:id="edit" t:context="current.id" >${message:edit-link-label}</t:actionlink></p:editCell>
-		<p:deleteCell><t:actionlink t:id="delete" t:context="current.id" t:mixins="fe/confirm" t:confirmMessage="message:really-delete-query" >${message:delete-link-label}</t:actionlink></p:deleteCell>
+		<p:createDateCell><t:output value="row.createDate" t:format="dateFormat"/></p:createDateCell>
+		<p:idCell>${row.id}</p:idCell>
 	</t:fe.gtable>
+	</t:zone>
 	</div>
 	<div class="masterDetailForm">
-		<t:component t:id="detailForm" />
+		<t:zone t:id="detailZone">
+		<t:component t:id="personDetail" />
+		</t:zone>
 	</div>
 </div>
 </body>

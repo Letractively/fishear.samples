@@ -3,7 +3,6 @@ package net.fishear.samples.t5.srchgridform.entities;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 import net.fishear.data.generic.entities.AbstractStdandardEntity;
 
@@ -58,10 +57,4 @@ extends
 	public String getTitles() {
 		return titles;
 	}
-	
-//	@Transient
-	public String recordDescription () {
-		return "Person " + (get("firstName", "") + " " + get("lastName", "")).trim();
-	} 
-
 }

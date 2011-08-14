@@ -1,6 +1,6 @@
 package net.fishear.samples.t5.srchgridform.components.layout;
 
-import net.fishear.samples.t5.srchgridform.pages.Clients;
+import net.fishear.samples.t5.srchgridform.pages.Admin;
 import net.fishear.samples.t5.srchgridform.pages.ExtPersons;
 import net.fishear.samples.t5.srchgridform.pages.Index;
 import net.fishear.samples.t5.srchgridform.pages.about.About;
@@ -114,7 +114,7 @@ extends
     	return new MenuItem[] {
         		new MenuItem(Index.class, "index"),
         		new MenuItem(ExtPersons.class, "Extpersons"),
-        		new MenuItem(Clients.class, "clients"),
+        		new MenuItem(Admin.class, "admin"),
         		new MenuItem(About.class, "about")
     	};
     }

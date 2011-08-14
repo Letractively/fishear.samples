@@ -1,0 +1,9 @@
+table.t-data-grid .personCode { width: 5em; }
+table.t-data-grid .firstName { width: 14em; }
+table.t-data-grid .lastName { width: 16em; }
+table.t-data-grid .titles { width: 10em; }
+table.t-data-grid .orgUnitCode { width: 6em; }
+table.t-data-grid .edit { width: 5em; }
+table.t-data-grid .delete { width: 5em; }
+
+div.t-data-grid { height: 21em; }
