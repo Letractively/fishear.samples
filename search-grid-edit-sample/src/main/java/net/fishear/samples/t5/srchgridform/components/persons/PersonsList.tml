@@ -5,17 +5,15 @@
 >
 <body>
 <div class="masterDetail">
-	<t:fe.messages />
+	<t:fe.messages stayOn="true" />
 	<div class="masterDetailSearch">
 		<t:component t:id="personSearch" />
 	</div>
 	<div class="masterDetailGrid">
 	<t:zone t:id="gridZone">
-	<t:fe.gtable
+	<t:fe.table
 		inplace="true"
-		source="datasource"
 		rowsPerPage="10"
-		row="row"
 		include="personCode,firstname,lastname,titles,createDate"
 		add="edit,delete"
 		pagerPosition="bottom"
@@ -23,7 +21,7 @@
 	>
 		<p:createDateCell><t:output value="row.createDate" t:format="dateFormat"/></p:createDateCell>
 		<p:idCell>${row.id}</p:idCell>
-	</t:fe.gtable>
+	</t:fe.table>
 	</t:zone>
 	</div>
 	<div class="masterDetailForm">

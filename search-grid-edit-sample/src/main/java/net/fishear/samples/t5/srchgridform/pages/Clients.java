@@ -1,6 +1,6 @@
 package net.fishear.samples.t5.srchgridform.pages;
 
-import net.fishear.samples.t5.srchgridform.components.admin.ClientList;
+import net.fishear.samples.t5.srchgridform.components.client.ClientList;
 import net.fishear.web.services.EnvironmentService;
 
 import org.apache.tapestry5.annotations.Component;
@@ -14,7 +14,7 @@ public class Clients
 {
 
 	@Component
-	private ClientList persTypeCodeList;
+	private ClientList clientList;
 	
 	@Inject
 	private EnvironmentService envSvc;

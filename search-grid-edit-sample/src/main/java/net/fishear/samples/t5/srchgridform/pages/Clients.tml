@@ -5,6 +5,6 @@
 	xmlns:p="tapestry:parameter"
 >
 <t:feac.requireLogin roleCode="${RoleCodes}">
-	<t:component t:id="persTypeCodeList" />
+	<t:component t:id="clientList" />
 </t:feac.requireLogin>
 </html>

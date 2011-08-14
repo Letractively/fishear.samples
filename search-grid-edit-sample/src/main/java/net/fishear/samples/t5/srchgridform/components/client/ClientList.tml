@@ -3,12 +3,12 @@
 	xmlns:p="tapestry:parameter" 
 	class="className"
 >
-	<div class="masterDetail" t:id="fullPageZone">
+	<div class="masterDetail" t:type="zone" t:id="fullPageZone">
 
 		<t:fe.messages />  <!-- it is enaugh to add this component to page. It is found and used by subcomponents. -->
 
 		<div class="masterDetailGrid" style="height: 250px; overflow: auto;">
-		<t:fe.gtable 
+		<t:fe.table 
 			reorder="code,fname,lname,remark"
 			t:source="DataSource" 
 			t:row="row"
@@ -22,7 +22,7 @@
 			<p:lnameCell>${row.person.lastName}</p:lnameCell>
 			<p:titlesCell>${row.person.titles}</p:titlesCell>
 			<p:codeCell>${row.person.personCode}</p:codeCell>
-		</t:fe.gtable>
+		</t:fe.table>
 		</div>
 
 		<div id="detailEditDiv">

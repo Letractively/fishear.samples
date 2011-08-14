@@ -1,4 +1,4 @@
-package net.fishear.samples.t5.srchgridform.components.admin;
+package net.fishear.samples.t5.srchgridform.components.client;
 
 import net.fishear.samples.t5.srchgridform.entities.Client;
 import net.fishear.web.t5.components.AbstractGrid;

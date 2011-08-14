@@ -1,4 +1,4 @@
-package net.fishear.samples.t5.srchgridform.components.admin;
+package net.fishear.samples.t5.srchgridform.components.client;
 
 import org.apache.tapestry5.annotations.Import;
 import org.apache.tapestry5.ioc.annotations.Inject;
