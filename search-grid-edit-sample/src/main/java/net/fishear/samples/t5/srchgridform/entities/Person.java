@@ -60,7 +60,7 @@ extends
 	}
 	
 //	@Transient
-	public String recordDescription () {
+	public String entityDescription () {
 		return "Person " + (get("firstName", "") + " " + get("lastName", "")).trim();
 	} 
 

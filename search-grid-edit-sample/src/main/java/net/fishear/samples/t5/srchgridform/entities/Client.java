@@ -37,7 +37,7 @@ public class Client extends AbstractStdandardEntity
 	}
 	
 	@Transient
-	public String recordDescription () {
+	public String entityDescription () {
 		return "Client '" + (get("person.firstName", "") + " " + get("person.lastName", "")).trim() + "'";
 	} 
 	
