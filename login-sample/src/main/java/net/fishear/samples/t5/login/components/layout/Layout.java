@@ -4,7 +4,7 @@ import net.fishear.samples.t5.login.pages.Index;
 import net.fishear.utils.Texts;
 import net.fishear.web.rights.t5.components.AccountInfo;
 import net.fishear.web.rights.t5.components.LoginForm;
-import net.fishear.web.t5.base.AbstractComponent;
+import net.fishear.web.t5.base.ComponentBase;
 
 import org.apache.tapestry5.BindingConstants;
 import org.apache.tapestry5.Block;
@@ -36,7 +36,7 @@ import org.apache.tapestry5.services.javascript.JavaScriptSupport;
 public class
 	Layout
 extends
-	AbstractComponent
+	ComponentBase
 {
 	public static final String JQUERY_BASE = "context:asset/jquery";
 	public static final String JQUUI_BASE = JQUERY_BASE;

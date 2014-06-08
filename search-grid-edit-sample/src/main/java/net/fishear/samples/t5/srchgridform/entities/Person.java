@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import net.fishear.data.generic.entities.AbstractStandardEntity;
 import net.fishear.data.generic.entities.AbstractStdandardEntity;
 
 @Entity
@@ -12,7 +13,7 @@ import net.fishear.data.generic.entities.AbstractStdandardEntity;
 public class 
 	Person
 extends
-	AbstractStdandardEntity
+	AbstractStandardEntity
 {
 
 	private String firstName;

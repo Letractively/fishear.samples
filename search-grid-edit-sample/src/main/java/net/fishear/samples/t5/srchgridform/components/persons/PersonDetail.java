@@ -7,7 +7,7 @@ import net.fishear.data.generic.services.GenericService;
 import net.fishear.samples.t5.srchgridform.entities.Person;
 import net.fishear.samples.t5.srchgridform.services.ClientService;
 import net.fishear.samples.t5.srchgridform.services.PersonService;
-import net.fishear.web.t5.components.AbstractForm;
+import net.fishear.web.t5.base.AbstractDetailComponent;
 
 import org.apache.tapestry5.annotations.Import;
 import org.apache.tapestry5.ioc.annotations.Inject;
@@ -17,22 +17,28 @@ import org.apache.tapestry5.ioc.annotations.Inject;
 public class 
 	PersonDetail
 extends
-	AbstractForm<Person>
+	AbstractDetailComponent<Person>
 {
 
 	@Inject
 	private ClientService clSvc;
 	
 	@Inject
-	private PersonService epSvc;
+	private PersonService personService;
 
 	public Map<Object, String> getPersTypes() {
-		return clSvc.getIdValueMap(null, "description");
+		return (Map<Object, String>) clSvc.getIdValueMap(null, "description");
 	}
 
 	@Override
 	public GenericService<Person> getService() {
-		return epSvc;
+		return personService;
+	}
+
+	@Override
+	protected void beforeSave(Person entity) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

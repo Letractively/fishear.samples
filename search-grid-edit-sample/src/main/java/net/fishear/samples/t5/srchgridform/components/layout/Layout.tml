@@ -21,9 +21,12 @@ Description: A Web 2.0 design with fluid width suitable for blogs and small webs
     </head>
     <body>
         <!-- start header -->
-	    <div id="loginFormDialog" title="Login form" style="display:none">
-	    	<t:component t:id="loginForm" />
-	   	</div>
+		<t:jquery.dialog t:clientId="loginDialog" params="literal:{width:600,draggable:true,title:'Account Login'}">
+		    <t:zone t:id="loginDialogZone" id="loginDialogZone">
+			    Type any name and any password.
+		    	<t:component t:id="loginForm" />
+		    </t:zone>
+	    </t:jquery.dialog>
         <div id="header">
             <div id="logo">
                 <h1>
@@ -41,7 +44,9 @@ Description: A Web 2.0 design with fluid width suitable for blogs and small webs
 		            </div>
         		</td></tr>
         		<tr><td>
-		           <t:component t:id="accountInfo" onclickAction="literal:showLogin()"/>
+					<t:jquery.dialoglink t:id="loginLink" t:dialog="loginDialog" >
+		           		<t:component t:id="accountInfo" onclickAction="literal:jQuery('#loginLink').click();return false;"/>
+					</t:jquery.dialoglink>
         		</td></tr>
         	</table>
         </div>
@@ -55,6 +60,7 @@ Description: A Web 2.0 design with fluid width suitable for blogs and small webs
                         <h2>${title}</h2>
                     </div>
                     <div class="entry">
+                    	<t:alerts />
                         <t:body/>
                     </div>
                 </div>

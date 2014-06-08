@@ -5,8 +5,6 @@
 
 	<div class="masterDetail" t:type="zone" t:id="fullPageZone">
 
-		<t:fe.messages />  <!-- it is enaugh to add this component to page. It is found and used by subcomponents. -->
-
 		<div class="masterDetailGrid" style="height: 250px; overflow: auto;">
 		<t:fe.table 
 			reorder="code,fname,lname,remark"

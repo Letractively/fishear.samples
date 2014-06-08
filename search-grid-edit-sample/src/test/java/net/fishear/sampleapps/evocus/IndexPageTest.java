@@ -35,7 +35,7 @@ extends
 	@ForComponents
 	public LoginLogoutService llSvc = mock(LoginLogoutService.class);
 
-	@Test
+//	@Test
 	public void menuTest() throws JaxenException {
 		when(llSvc.isLoggedIn()).thenReturn(true);
 		doNothing().when(llSvc).checkRememberMe();

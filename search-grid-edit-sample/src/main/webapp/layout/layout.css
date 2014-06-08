@@ -13,6 +13,10 @@ body {
     color: #626262;
 }
 
+.ui-form-label {
+	display: inline-block;
+}
+
 .gtable-empty-block {
 	border: #F0C0C0 2px solid; padding:2px 10px 2px 10px; font-weight: bold; background-color: #F8f0f0;
 }

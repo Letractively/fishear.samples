@@ -11,40 +11,18 @@ import net.fishear.web.t5.base.ComponentBase;
 
 import org.apache.tapestry5.BindingConstants;
 import org.apache.tapestry5.Block;
-import org.apache.tapestry5.ComponentResources;
-import org.apache.tapestry5.MarkupWriter;
-import org.apache.tapestry5.annotations.AfterRender;
 import org.apache.tapestry5.annotations.Component;
 import org.apache.tapestry5.annotations.Import;
 import org.apache.tapestry5.annotations.Parameter;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.ioc.annotations.Inject;
-import org.apache.tapestry5.services.PageRenderLinkSource;
-import org.apache.tapestry5.services.Request;
 import org.apache.tapestry5.services.javascript.JavaScriptSupport;
 
 
 /**
  * Layout component for pages of application Person app.
  */
-@Import( stylesheet = {
-			"context:layout/layout.css"
-//			, JQUERY_BASE + "/jquery-ui/themes/base/jquery.ui.all.css"
-		}
-//		, library = {
-//			JQUERY_BASE + "/" + JQUERY_FILE,
-//	        JQUERY_BASE + "/jquery-noconflict.js",
-////	        JQUUI_BASE + "/external/jquery.bgiframe-2.1.1.js",
-//	        JQUUI_BASE + "/js/jquery-ui.min.js",
-//	        JQUUI_BASE + "/js/jquery-ui-i18n.js",
-////	        JQUERY_BASE + "/clearfield.js",
-//	        JQUERY_BASE + "/fg.menu/fg.menu.js",
-////	        JQUERY_BASE + "/jquery.scrollTo-1.4.2.js",
-//	        JQUERY_BASE + "/jquery.cookies.min.js",
-//	        "Layout.js"
-//	}
-)
-@SuppressWarnings("unused")
+@Import( stylesheet = {"context:layout/Layout.css", "Layout.css"})
 public class
 	Layout
 extends
@@ -74,16 +52,7 @@ extends
 
  	@Inject
     private JavaScriptSupport rsup;
-    
-    @Inject
-    private Request request;
-    
-    @Inject
-    private ComponentResources crsc;
-    
-    @Inject
-    private PageRenderLinkSource prsc;
-    
+
     public String getAppTitle() {
     	return Texts.tos(translate("application-name"), " - ", subtitle);
     }
