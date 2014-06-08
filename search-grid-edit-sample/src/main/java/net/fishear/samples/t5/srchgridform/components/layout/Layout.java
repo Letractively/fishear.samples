@@ -7,11 +7,7 @@ import net.fishear.samples.t5.srchgridform.pages.about.About;
 import net.fishear.utils.Texts;
 import net.fishear.web.rights.t5.components.AccountInfo;
 import net.fishear.web.rights.t5.components.LoginForm;
-import net.fishear.web.t5.base.AbstractComponent;
-import static net.fishear.web.t5.base.Constants.JQUERY_BASE;
-import static net.fishear.web.t5.base.Constants.JQUERY_FILE;
-import static net.fishear.web.t5.base.Constants.JQUUI_BASE;
-import static net.fishear.web.t5.base.Constants.REQUIRED_LOGIN_RQATR;
+import net.fishear.web.t5.base.ComponentBase;
 
 import org.apache.tapestry5.BindingConstants;
 import org.apache.tapestry5.Block;
@@ -32,27 +28,27 @@ import org.apache.tapestry5.services.javascript.JavaScriptSupport;
  * Layout component for pages of application Person app.
  */
 @Import( stylesheet = {
-			"context:layout/layout.css",
-			JQUERY_BASE + "/jquery-ui/themes/base/jquery.ui.all.css"
-		},
-		library = {
-			JQUERY_BASE + "/" + JQUERY_FILE,
-	        JQUERY_BASE + "/jquery-noconflict.js",
-//	        JQUUI_BASE + "/external/jquery.bgiframe-2.1.1.js",
-	        JQUUI_BASE + "/js/jquery-ui.min.js",
-	        JQUUI_BASE + "/js/jquery-ui-i18n.js",
-//	        JQUERY_BASE + "/clearfield.js",
-	        JQUERY_BASE + "/fg.menu/fg.menu.js",
-//	        JQUERY_BASE + "/jquery.scrollTo-1.4.2.js",
-	        JQUERY_BASE + "/jquery.cookies.min.js",
-	        "Layout.js"
-	}
+			"context:layout/layout.css"
+//			, JQUERY_BASE + "/jquery-ui/themes/base/jquery.ui.all.css"
+		}
+//		, library = {
+//			JQUERY_BASE + "/" + JQUERY_FILE,
+//	        JQUERY_BASE + "/jquery-noconflict.js",
+////	        JQUUI_BASE + "/external/jquery.bgiframe-2.1.1.js",
+//	        JQUUI_BASE + "/js/jquery-ui.min.js",
+//	        JQUUI_BASE + "/js/jquery-ui-i18n.js",
+////	        JQUERY_BASE + "/clearfield.js",
+//	        JQUERY_BASE + "/fg.menu/fg.menu.js",
+////	        JQUERY_BASE + "/jquery.scrollTo-1.4.2.js",
+//	        JQUERY_BASE + "/jquery.cookies.min.js",
+//	        "Layout.js"
+//	}
 )
 @SuppressWarnings("unused")
 public class
 	Layout
 extends
-	AbstractComponent
+	ComponentBase
 {
     /** The page title, for the <title> element and the <h1> element. */
 	@Property
@@ -89,7 +85,7 @@ extends
     private PageRenderLinkSource prsc;
     
     public String getAppTitle() {
-    	return Texts.tos(getMessage("application-name"), " - ", subtitle);
+    	return Texts.tos(translate("application-name"), " - ", subtitle);
     }
 
     public String getPageTitle() {

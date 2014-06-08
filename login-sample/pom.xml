@@ -1,20 +1,26 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>net.fishear.samples</groupId>
-  <artifactId>login-sample</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+	<groupId>net.fishear.samples</groupId>
+	<artifactId>login-sample</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<parent>
+		<groupId>net.fishear</groupId>
+		<artifactId>fishear-root</artifactId>
+		<version>1.0</version>
+		<relativePath>root</relativePath>
+	</parent>
 
 	<dependencies>
 		<dependency>
 			<groupId>net.fishear</groupId>
 			<artifactId>fishear-t5</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<version>1.0.3-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>net.fishear</groupId>
 			<artifactId>fishear-t5-rights</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<version>1.0.3-SNAPSHOT</version>
 		</dependency>
 		
 		<dependency>
@@ -142,8 +148,10 @@
 	</pluginRepositories>
 
 	<properties>
-		<tapestry-release-version>5.2.6</tapestry-release-version>
+		<tapestry-release-version>5.3.7</tapestry-release-version>
 		<failIfNoTests>false</failIfNoTests>
 	</properties>
+
+	<modelVersion>4.0.0</modelVersion>
 
 </project>

@@ -11,15 +11,21 @@
 
 	<groupId>net.fishear.samples</groupId>
 	<artifactId>samples-root</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0.3-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>Custom Registration</name>
+	<name>FishEar samples</name>
+	
+	<modules>
+		<module>login-sample</module>
+		<module>search-grid-edit-sample</module>
+	</modules>
+
 	<dependencies>
 		<dependency>
 			<groupId>net.fishear</groupId>
 			<artifactId>fishear-t5</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<version>1.0.3-SNAPSHOT</version>
 		</dependency>
 		
 		<dependency>

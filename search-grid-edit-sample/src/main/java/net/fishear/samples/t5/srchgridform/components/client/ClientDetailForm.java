@@ -7,33 +7,35 @@ import net.fishear.samples.t5.srchgridform.entities.Client;
 import net.fishear.samples.t5.srchgridform.entities.Person;
 import net.fishear.samples.t5.srchgridform.services.ClientService;
 import net.fishear.samples.t5.srchgridform.services.PersonService;
-import net.fishear.web.t5.components.AbstractForm;
+import net.fishear.web.t5.base.AbstractGridDetailComponent;
 
 
 @Import(stylesheet = "ClientDetailForm.css")
 public class 
 	ClientDetailForm
 extends
-	AbstractForm<Client>
+	AbstractGridDetailComponent<Client>
 {
 
 	@Inject
-	private ClientService clientService;
-	
+	ClientService clientService;
+
 	@Inject
-	private PersonService persSvc;
+	PersonService personService;
 	
 	@Override
 	public ClientService getService() {
 		return clientService;
 	}
 
-	protected void prepareNewEntity(Client entity) {
-		entity.setPerson(new Person());
+	@Override
+	protected void newEntityInstance(Client entity) {
+		entity.setPerson(personService.newEntityInstance());
 	}
-
+	
+	@Override
 	protected void beforeSave(Client entity) {
-		persSvc.save(entity.getPerson());
+		personService.save(entity.getPerson());
 	}
 
 }
